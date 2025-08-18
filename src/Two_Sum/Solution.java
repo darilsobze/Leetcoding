@@ -5,10 +5,18 @@ import java.util.Scanner;
 
 public class Solution {
     public static void main( String[] args) {
-        int[] numbers = new int[]{1,3,4,8,9,5};
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your Array's numbers separated by space: ");
+        String line = scanner.nextLine();
+        //split the line into parts
+        String[] parts = line.split(" ");
+        int[] numbers = new int[parts.length];
+        for(int i=0; i<parts.length; i++){
+            numbers[i]= Integer.parseInt(parts[i]);
+        }
         System.out.println(Arrays.toString(numbers));
         System.out.print("Enter your target number : ");
-        Scanner scanner = new Scanner(System.in);
+
         int target = scanner.nextInt();
         System.out.println(Arrays.toString(twoSum(numbers, target)));
     }
