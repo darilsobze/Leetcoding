@@ -1,7 +1,15 @@
 package Add_Binary;
 
+import java.util.Scanner;
+
 public class Solution {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your first Binary Number: ");
+        String num1= scanner.nextLine();
+        System.out.print("Enter your second Binary Number: ");
+        String num2= scanner.nextLine();
+        System.out.println(num1 +" + " + num2 + " = " + addBinary(num1,num2));
 
     }
 
